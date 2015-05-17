@@ -1,7 +1,7 @@
 #except ... 
 !.gitignore
-!src/
-!bin/
+!src/*
+!bin/*
 
 #ignore everything 
 *
