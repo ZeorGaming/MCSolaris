@@ -7,9 +7,9 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class TestModItem extends Item
+public class ItemSolariumIngot extends Item
 {
-	public TestModItem()
+	public ItemSolariumIngot()
 	{
 		super();
 		setCreativeTab(CreativeTabs.tabMisc);

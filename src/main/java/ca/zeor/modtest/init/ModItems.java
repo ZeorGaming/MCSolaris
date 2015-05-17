@@ -1,16 +1,16 @@
 package ca.zeor.modtest.init;
 
 import ca.zeor.modtest.help.RegisterHelper;
-import ca.zeor.modtest.items.TestModItem;
+import ca.zeor.modtest.items.ItemSolariumIngot;
 import net.minecraft.item.Item;
 
 public class ModItems 
 {
-	public static Item testIngot = new TestModItem().setUnlocalizedName("testIngot");
+	public static Item SolariumIngot = new ItemSolariumIngot().setUnlocalizedName("SolariumIngot");
 	
     public static void init()
     {
-    	RegisterHelper.registerItem(testIngot);
+    	RegisterHelper.registerItem(SolariumIngot);
     	
     	
     	

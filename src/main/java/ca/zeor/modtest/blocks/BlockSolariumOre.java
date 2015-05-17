@@ -5,13 +5,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class BlockTestOre extends Block
+public class BlockSolariumOre extends Block
 {
-	public BlockTestOre()
+	public BlockSolariumOre()
 	{
 		super(Material.iron);
 		setCreativeTab(CreativeTabs.tabMisc);
-		setBlockName("testOre");
+		setBlockName("SolariumOre");
 		setBlockTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5));
 	}
 }
