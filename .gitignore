@@ -4,6 +4,8 @@
 !.gitignore
 !/src/
 !src/*
+!*.java
 !/bin/
 !bin/*
+!*.png
 !*/
