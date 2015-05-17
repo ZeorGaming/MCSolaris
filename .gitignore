@@ -5,6 +5,16 @@
 !.gitignore
 !src/
 !src/*
+!src/*/*
+!src/*/*/*
+!src/*/*/*/*
+!src/*/*/*/*/*
 !bin/
 !bin/*
-/bin/
+!bin/*/*
+!bin/*/*/*
+!bin/*/*/*/*
+!bin/*/*/*/*/*
+
+#even if they are subs
+!*/
