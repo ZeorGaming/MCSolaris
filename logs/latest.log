@@ -1,0 +1,77 @@
+[02:16:27] [main/INFO]: Logging in with username & password
+[02:16:30] [main/INFO]: Setting user: Zeoic
+[02:16:31] [Client thread/INFO]: LWJGL Version: 2.9.1
+[02:16:35] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
+[02:16:36] [Sound Library Loader/INFO]: Sound engine started
+[02:16:36] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[02:16:36] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[02:16:36] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
+[02:16:36] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[02:16:36] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[02:16:37] [Sound Library Loader/INFO]: Sound engine started
+[02:16:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[02:16:40] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[02:16:40] [Server thread/INFO]: Generating keypair
+[02:16:40] [Server thread/INFO]: Preparing start region for level 0
+[02:16:41] [Server thread/INFO]: Changing view distance to 12, from 10
+[02:16:41] [Server thread/INFO]: Zeoic[local:E:46b1af2e] logged in with entity id 423 at (27.40681973773366, 66.0, 130.6783544535961)
+[02:16:41] [Server thread/INFO]: Zeoic joined the game
+[02:16:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.game.creative
+[02:16:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:16:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:16:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:16:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:16:47] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:16:48] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:16:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:16:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:16:50] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:16:51] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:16:51] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:16:52] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:16:52] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:16:54] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[02:16:54] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[02:16:55] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[02:16:55] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:16:55] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[02:16:55] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:16:56] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:16:56] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:16:57] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[02:16:57] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[02:16:58] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.stone
+[02:16:58] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:17:00] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:17:01] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.stone
+[02:17:01] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.stone
+[02:17:02] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:17:03] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:17:04] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:17:05] [Server thread/INFO]: Saving and pausing game...
+[02:17:05] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[02:17:05] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[02:17:05] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[02:17:05] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[02:17:06] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[02:17:15] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:17:16] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:17:16] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:17:16] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.pop
+[02:17:17] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.grass
+[02:17:18] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:17:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:17:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[02:17:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.pop
+[02:17:30] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.pop
+[02:17:39] [Server thread/INFO]: Saving and pausing game...
+[02:17:39] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[02:17:39] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[02:17:39] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[02:17:40] [Client thread/INFO]: Stopping!
+[02:17:40] [Server thread/INFO]: Stopping server
+[02:17:40] [Server thread/INFO]: Saving players
+[02:17:40] [Server thread/INFO]: Saving worlds
+[02:17:40] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[02:17:40] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[02:17:40] [Server thread/INFO]: Saving chunks for level 'test world'/The End
