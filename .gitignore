@@ -1,27 +1,7 @@
 #except ... 
 !.gitignore
-!src/*
-!src/main/*
-!src/main/java/*
-!src/main/resources/*
-!src/main/resources/*
-!src/main/resources/assets/*
-!src/main/resources/assets/modid/lang/*
-!src/main/resources/assets/zeor_testmod/blocks/*
-!src/main/resources/assets/zeor_testmod/items/*
-!src/main/java/ca/*
-!src/main/java/ca/demetry/*
-!src/main/java/ca/demetry/modtest/*
-!src/main/java/ca/demetry/modtest/constants/*
-!src/main/java/ca/demetry/modtest/machines/*
-!src/main/java/ca/demetry/modtest/proxy/*
-!src/main/java/ca/zeor/*
-!src/main/java/ca/zeor/modtest/*
-!src/main/java/ca/zeor/modtest/blocks/*
-!src/main/java/ca/zeor/modtest/help/*
-!src/main/java/ca/zeor/modtest/init/*
-!src/main/java/ca/zeor/modtest/items/*
-!bin/*
+!/src/
+!/bin/
 
 #ignore everything 
 *
