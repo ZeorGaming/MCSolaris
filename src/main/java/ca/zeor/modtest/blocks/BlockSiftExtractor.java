@@ -7,7 +7,9 @@ package ca.zeor.modtest.blocks;
 
 import java.util.Random;
 
+import ca.demetry.modtest.GUI.GUIs;
 import ca.demetry.modtest.machines.TileEntitySiftExtractor;
+import ca.zeor.modtest.ModTest;
 import ca.zeor.modtest.help.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -39,6 +41,17 @@ public class BlockSiftExtractor extends Block implements ITileEntityProvider{
 	
 	@Override
 	public boolean hasTileEntity(int m){
+		return true;
+	}
+	
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int meta, float hitX, float hitY, float hitZ){
+		if(world.isRemote){
+			if(world.getTileEntity(x, y, z) != null){
+				player.openGui(ModTest.instance, GUIs.SIFT_EXTRACTOR.ordinal(), world, x, y, z);
+				return true;
+			}
+		}
 		return true;
 	}
 }

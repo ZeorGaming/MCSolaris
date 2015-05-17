@@ -14,12 +14,4 @@ public class TileEntitySiftExtractor extends TileEntity{
 	public String getName(){
 		return name;
 	}
-	
-	@Override
-	public void updateEntity(){
-		//TODO: Unused Method Stub PLS FILL ME !!!!
-		this.worldObj.setWorldTime(1000); // This is just for testing!!
-	}
-	
-	
 }

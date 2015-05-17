@@ -1,32 +1,32 @@
-[14:43:47] [main/INFO]: Setting user: Player643
-[14:43:48] [Client thread/INFO]: LWJGL Version: 2.9.1
-[14:43:53] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
-[14:43:53] [Sound Library Loader/INFO]: Sound engine started
-[14:43:54] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[14:43:54] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[14:43:54] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
-[14:43:55] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[14:43:55] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[14:43:56] [Sound Library Loader/INFO]: Sound engine started
-[14:43:56] [Client thread/ERROR]: ########## GL ERROR ##########
-[14:43:56] [Client thread/ERROR]: @ Post startup
-[14:43:56] [Client thread/ERROR]: 1286: Invalid framebuffer operation
-[14:44:01] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[14:44:01] [Server thread/INFO]: Generating keypair
-[14:44:02] [Server thread/INFO]: Preparing start region for level 0
-[14:44:03] [Server thread/INFO]: Changing view distance to 12, from 10
-[14:44:03] [Server thread/INFO]: Player643[local:E:519c5b63] logged in with entity id 208 at (25.925460744579816, 66.0, 129.79426569809)
-[14:44:03] [Server thread/INFO]: Player643 joined the game
-[14:44:12] [Server thread/INFO]: Player643 has just earned the achievement [Taking Inventory]
-[14:44:12] [Client thread/INFO]: [CHAT] Player643 has just earned the achievement [Taking Inventory]
-[14:44:32] [Server thread/INFO]: Saving and pausing game...
-[14:44:32] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
-[14:44:32] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
-[14:44:32] [Server thread/INFO]: Saving chunks for level 'test world'/The End
-[14:44:58] [Client thread/INFO]: Stopping!
-[14:44:58] [Server thread/INFO]: Stopping server
-[14:44:58] [Server thread/INFO]: Saving players
-[14:44:58] [Server thread/INFO]: Saving worlds
-[14:44:58] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
-[14:44:58] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
-[14:44:58] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[19:04:19] [main/INFO]: Setting user: Player421
+[19:04:20] [Client thread/INFO]: LWJGL Version: 2.9.1
+[19:04:24] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MCSolaris
+[19:04:25] [Sound Library Loader/INFO]: Sound engine started
+[19:04:25] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[19:04:26] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[19:04:26] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MCSolaris
+[19:04:26] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[19:04:26] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[19:04:27] [Sound Library Loader/INFO]: Sound engine started
+[19:04:27] [Client thread/ERROR]: ########## GL ERROR ##########
+[19:04:27] [Client thread/ERROR]: @ Post startup
+[19:04:27] [Client thread/ERROR]: 1286: Invalid framebuffer operation
+[19:04:30] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[19:04:30] [Server thread/INFO]: Generating keypair
+[19:04:31] [Server thread/INFO]: Preparing start region for level 0
+[19:04:32] [Server thread/INFO]: Changing view distance to 12, from 10
+[19:04:32] [Server thread/INFO]: Player421[local:E:81e4639c] logged in with entity id 167 at (28.385012357043152, 66.0, 131.3852078203524)
+[19:04:32] [Server thread/INFO]: Player421 joined the game
+[19:04:42] [Server thread/INFO]: Player421 has just earned the achievement [Taking Inventory]
+[19:04:42] [Client thread/INFO]: [CHAT] Player421 has just earned the achievement [Taking Inventory]
+[19:05:07] [Server thread/INFO]: Saving and pausing game...
+[19:05:07] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[19:05:07] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[19:05:07] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[19:05:09] [Server thread/INFO]: Stopping server
+[19:05:09] [Server thread/INFO]: Saving players
+[19:05:09] [Server thread/INFO]: Saving worlds
+[19:05:09] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[19:05:09] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[19:05:09] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[19:05:11] [Client thread/INFO]: Stopping!
