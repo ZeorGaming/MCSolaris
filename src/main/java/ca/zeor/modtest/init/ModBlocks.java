@@ -4,6 +4,7 @@ package ca.zeor.modtest.init;
  * @Author: Zeoic, Demetry
  * @Date: 051715
  * @brief: This mod registers all the block classes 
+ * Cleaned it up by compaction;
  */
 
 import ca.zeor.modtest.blocks.*;

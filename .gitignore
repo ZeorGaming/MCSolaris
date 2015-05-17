@@ -4,4 +4,7 @@
 #except ... 
 !.gitignore
 !src/
+!src/*
 !bin/
+!bin/*
+/bin/

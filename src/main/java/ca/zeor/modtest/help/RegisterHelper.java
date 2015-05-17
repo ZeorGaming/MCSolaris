@@ -1,5 +1,9 @@
 package ca.zeor.modtest.help;
 
+/**
+ * @breif This is a registry class for the game simular to what I did with tile entities
+ */
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

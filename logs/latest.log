@@ -1,28 +1,32 @@
-[03:26:20] [main/INFO]: Setting user: Player301
-[03:26:21] [Client thread/INFO]: LWJGL Version: 2.9.1
-[03:26:25] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
-[03:26:26] [Sound Library Loader/INFO]: Sound engine started
-[03:26:26] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[03:26:27] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[03:26:27] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
-[03:26:27] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[03:26:27] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[03:26:28] [Sound Library Loader/INFO]: Sound engine started
-[03:26:30] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[03:26:30] [Server thread/INFO]: Generating keypair
-[03:26:30] [Server thread/INFO]: Preparing start region for level 0
-[03:26:31] [Server thread/INFO]: Changing view distance to 12, from 10
-[03:26:31] [Server thread/INFO]: Player301[local:E:29ec8ac2] logged in with entity id 209 at (25.925460744579816, 66.0, 129.79426569809)
-[03:26:31] [Server thread/INFO]: Player301 joined the game
-[03:26:33] [Server thread/INFO]: Player301 has just earned the achievement [Taking Inventory]
-[03:26:33] [Client thread/INFO]: [CHAT] Player301 has just earned the achievement [Taking Inventory]
-[03:26:34] [Client thread/INFO]: Stopping!
-[03:26:34] [Server thread/INFO]: Stopping server
-[03:26:34] [Server thread/INFO]: Saving players
-[03:26:34] [Server thread/INFO]: Saving worlds
-[03:26:34] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
-[03:26:34] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
-[03:26:34] [Server thread/INFO]: Saving chunks for level 'test world'/The End
-[03:26:34] [Client Shutdown Thread/INFO]: Stopping server
-[03:26:34] [Client Shutdown Thread/INFO]: Saving players
-[03:26:34] [Client Shutdown Thread/INFO]: Saving worlds
+[14:43:47] [main/INFO]: Setting user: Player643
+[14:43:48] [Client thread/INFO]: LWJGL Version: 2.9.1
+[14:43:53] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
+[14:43:53] [Sound Library Loader/INFO]: Sound engine started
+[14:43:54] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[14:43:54] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[14:43:54] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
+[14:43:55] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[14:43:55] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[14:43:56] [Sound Library Loader/INFO]: Sound engine started
+[14:43:56] [Client thread/ERROR]: ########## GL ERROR ##########
+[14:43:56] [Client thread/ERROR]: @ Post startup
+[14:43:56] [Client thread/ERROR]: 1286: Invalid framebuffer operation
+[14:44:01] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[14:44:01] [Server thread/INFO]: Generating keypair
+[14:44:02] [Server thread/INFO]: Preparing start region for level 0
+[14:44:03] [Server thread/INFO]: Changing view distance to 12, from 10
+[14:44:03] [Server thread/INFO]: Player643[local:E:519c5b63] logged in with entity id 208 at (25.925460744579816, 66.0, 129.79426569809)
+[14:44:03] [Server thread/INFO]: Player643 joined the game
+[14:44:12] [Server thread/INFO]: Player643 has just earned the achievement [Taking Inventory]
+[14:44:12] [Client thread/INFO]: [CHAT] Player643 has just earned the achievement [Taking Inventory]
+[14:44:32] [Server thread/INFO]: Saving and pausing game...
+[14:44:32] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[14:44:32] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[14:44:32] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[14:44:58] [Client thread/INFO]: Stopping!
+[14:44:58] [Server thread/INFO]: Stopping server
+[14:44:58] [Server thread/INFO]: Saving players
+[14:44:58] [Server thread/INFO]: Saving worlds
+[14:44:58] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[14:44:58] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[14:44:58] [Server thread/INFO]: Saving chunks for level 'test world'/The End

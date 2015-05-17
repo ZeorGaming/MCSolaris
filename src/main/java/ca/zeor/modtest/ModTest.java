@@ -1,5 +1,10 @@
 package ca.zeor.modtest;
 
+/**
+ * @author Demetry
+ * @brief This is the main mod class!
+ */
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
