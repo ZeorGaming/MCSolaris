@@ -1,27 +1,28 @@
-[03:19:39] [main/INFO]: Setting user: Player762
-[03:19:39] [Client thread/INFO]: LWJGL Version: 2.9.1
-[03:19:43] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
-[03:19:44] [Sound Library Loader/INFO]: Sound engine started
-[03:19:45] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[03:19:45] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[03:19:45] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
-[03:19:45] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[03:19:45] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[03:19:46] [Sound Library Loader/INFO]: Sound engine started
-[03:19:49] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[03:19:49] [Server thread/INFO]: Generating keypair
-[03:19:50] [Server thread/INFO]: Preparing start region for level 0
-[03:19:51] [Server thread/INFO]: Changing view distance to 12, from 10
-[03:19:51] [Server thread/INFO]: Player762[local:E:f6715518] logged in with entity id 209 at (25.925460744579816, 66.0, 129.79426569809)
-[03:19:51] [Server thread/INFO]: Player762 joined the game
-[03:19:53] [Server thread/INFO]: Saving and pausing game...
-[03:19:53] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
-[03:19:53] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
-[03:19:53] [Server thread/INFO]: Saving chunks for level 'test world'/The End
-[03:19:54] [Server thread/INFO]: Stopping server
-[03:19:54] [Server thread/INFO]: Saving players
-[03:19:54] [Server thread/INFO]: Saving worlds
-[03:19:54] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
-[03:19:54] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
-[03:19:54] [Server thread/INFO]: Saving chunks for level 'test world'/The End
-[03:19:58] [Client thread/INFO]: Stopping!
+[03:26:20] [main/INFO]: Setting user: Player301
+[03:26:21] [Client thread/INFO]: LWJGL Version: 2.9.1
+[03:26:25] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
+[03:26:26] [Sound Library Loader/INFO]: Sound engine started
+[03:26:26] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[03:26:27] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[03:26:27] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TestMod
+[03:26:27] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[03:26:27] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[03:26:28] [Sound Library Loader/INFO]: Sound engine started
+[03:26:30] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[03:26:30] [Server thread/INFO]: Generating keypair
+[03:26:30] [Server thread/INFO]: Preparing start region for level 0
+[03:26:31] [Server thread/INFO]: Changing view distance to 12, from 10
+[03:26:31] [Server thread/INFO]: Player301[local:E:29ec8ac2] logged in with entity id 209 at (25.925460744579816, 66.0, 129.79426569809)
+[03:26:31] [Server thread/INFO]: Player301 joined the game
+[03:26:33] [Server thread/INFO]: Player301 has just earned the achievement [Taking Inventory]
+[03:26:33] [Client thread/INFO]: [CHAT] Player301 has just earned the achievement [Taking Inventory]
+[03:26:34] [Client thread/INFO]: Stopping!
+[03:26:34] [Server thread/INFO]: Stopping server
+[03:26:34] [Server thread/INFO]: Saving players
+[03:26:34] [Server thread/INFO]: Saving worlds
+[03:26:34] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[03:26:34] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[03:26:34] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[03:26:34] [Client Shutdown Thread/INFO]: Stopping server
+[03:26:34] [Client Shutdown Thread/INFO]: Saving players
+[03:26:34] [Client Shutdown Thread/INFO]: Saving worlds
