@@ -11,3 +11,20 @@
 [02:54:39] [Client thread/ERROR]: ########## GL ERROR ##########
 [02:54:39] [Client thread/ERROR]: @ Post startup
 [02:54:39] [Client thread/ERROR]: 1286: Invalid framebuffer operation
+[02:55:37] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[02:55:37] [Server thread/INFO]: Generating keypair
+[02:55:37] [Server thread/INFO]: Preparing start region for level 0
+[02:55:38] [Server thread/INFO]: Changing view distance to 12, from 10
+[02:55:39] [Server thread/INFO]: Player253[local:E:2fc2a2e7] logged in with entity id 303 at (24.300042241832436, 75.0, 111.72950058160188)
+[02:55:39] [Server thread/INFO]: Player253 joined the game
+[02:55:42] [Server thread/INFO]: Player253 has just earned the achievement [Taking Inventory]
+[02:55:42] [Client thread/INFO]: [CHAT] Player253 has just earned the achievement [Taking Inventory]
+[02:55:58] [Client thread/INFO]: Stopping!
+[02:55:58] [Server thread/INFO]: Stopping server
+[02:55:58] [Server thread/INFO]: Saving players
+[02:55:58] [Server thread/INFO]: Saving worlds
+[02:55:58] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[02:55:58] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[02:55:58] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[02:55:58] [Client Shutdown Thread/INFO]: Stopping server
+[02:55:58] [Client Shutdown Thread/INFO]: Saving players
