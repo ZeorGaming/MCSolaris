@@ -12,8 +12,6 @@ public class SiftExtractor extends Block{
 		setCreativeTab(CreativeTabs.tabMisc);
 		setBlockName("SiftExtractor");
 		setBlockTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5));
-		
-		
 	}
 
 }
