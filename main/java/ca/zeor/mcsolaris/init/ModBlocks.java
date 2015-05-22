@@ -25,6 +25,7 @@ public class ModBlocks {
 		new BlockBariumOre(),
 		new BlockSiftExtractor(),
 		new BlockSolarPanel()
+		new BlockFurnaceTesting()
 	};
 	
 	public static Block SolariumOre = blocks[0];
@@ -35,6 +36,7 @@ public class ModBlocks {
 	public static Block BariumOre = blocks[5];
 	public static Block SiftExtractor = blocks[6];
 	public static Block SolarPanel = blocks[7];
+	public static Block FurnaceTesting = blocks[8];
 	
 	public static Block[] buildingBlocks = new Block[150];
 	
