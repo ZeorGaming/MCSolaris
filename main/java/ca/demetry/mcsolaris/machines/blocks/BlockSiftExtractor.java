@@ -6,13 +6,6 @@ package ca.demetry.mcsolaris.machines.blocks;
 
 import java.util.Random;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import ca.demetry.mcsolaris.creativetabs.SolarisCreativeTabs;
-import ca.demetry.mcsolaris.machines.tileentities.TileEntitySiftExtractor;
-import ca.zeor.mcsolaris.MCSolaris;
-import ca.zeor.mcsolaris.help.Reference;
-import ca.zeor.mcsolaris.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -26,13 +19,21 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import ca.demetry.mcsolaris.creativetabs.SolarisCreativeTabs;
+import ca.demetry.mcsolaris.machines.tileentities.TileEntitySiftExtractor;
+import ca.zeor.mcsolaris.MCSolaris;
+import ca.zeor.mcsolaris.help.Reference;
+import ca.zeor.mcsolaris.init.ModBlocks;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockSiftExtractor extends Block{
+	private boolean isWorking = false; 
+	private boolean isWorking_2 = false;
+	private Random rand = new Random();
+	
 	@SideOnly(Side.CLIENT)
 	private IIcon top;
-	private static boolean isSifting = false;
-	private final boolean isSifting2 = false;
-	private final Random random = new Random();
 
 	public BlockSiftExtractor(Material mat) {
 		super(mat);
@@ -66,7 +67,7 @@ public class BlockSiftExtractor extends Block{
 			return this.blockIcon;
 		}
 	}
-
+	
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
 		player.openGui(MCSolaris.instance, 0, world, x, y, z);
 		return true;
@@ -141,30 +142,14 @@ public class BlockSiftExtractor extends Block{
 		if (direction == 3) {
 			world.setBlockMetadataWithNotify(x, y, z, 4, 2);
 		}
-	}
 
-	public static void updateBlockState(boolean burning, World world, int x, int y, int z) {
-		int direction = world.getBlockMetadata(x, y, z);
-		TileEntity tileentity = world.getTileEntity(x, y, z);
-		isSifting = true;
-
-		if (burning) {
-			world.setBlock(x, y, z, ModBlocks.SiftExtractor);
-		} else {
-			world.setBlock(x, y, z, ModBlocks.SiftExtractor);
-		}
-
-		isSifting = false;
-		world.setBlockMetadataWithNotify(x, y, z, direction, 2);
-
-		if (tileentity != null) {
-			tileentity.validate();
-			world.setTileEntity(x, y, z, tileentity);
+		if (itemstack.hasDisplayName()) {
+			((TileEntitySiftExtractor) world.getTileEntity(x, y, z)).furnaceName(itemstack.getDisplayName());
 		}
 	}
 
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
-		if (!isSifting) {
+		if (!isWorking) {
 			TileEntitySiftExtractor tileentitytutfurnace = (TileEntitySiftExtractor) world.getTileEntity(x, y, z);
 
 			if (tileentitytutfurnace != null) {
@@ -172,12 +157,12 @@ public class BlockSiftExtractor extends Block{
 					ItemStack itemstack = tileentitytutfurnace.getStackInSlot(i);
 
 					if (itemstack != null) {
-						float f = this.random.nextFloat() * 0.6F + 0.1F;
-						float f1 = this.random.nextFloat() * 0.6F + 0.1F;
-						float f2 = this.random.nextFloat() * 0.6F + 0.1F;
+						float f = this.rand.nextFloat() * 0.6F + 0.1F;
+						float f1 = this.rand.nextFloat() * 0.6F + 0.1F;
+						float f2 = this.rand.nextFloat() * 0.6F + 0.1F;
 
 						while (itemstack.stackSize > 0) {
-							int j = this.random.nextInt(21) + 10;
+							int j = this.rand.nextInt(21) + 10;
 
 							if (j > itemstack.stackSize) {
 								j = itemstack.stackSize;
@@ -191,9 +176,9 @@ public class BlockSiftExtractor extends Block{
 							}
 
 							float f3 = 0.025F;
-							entityitem.motionX = (double) ((float) this.random.nextGaussian() * f3);
-							entityitem.motionY = (double) ((float) this.random.nextGaussian() * f3 + 0.1F);
-							entityitem.motionZ = (double) ((float) this.random.nextGaussian() * f3);
+							entityitem.motionX = (double) ((float) this.rand.nextGaussian() * f3);
+							entityitem.motionY = (double) ((float) this.rand.nextGaussian() * f3 + 0.1F);
+							entityitem.motionZ = (double) ((float) this.rand.nextGaussian() * f3);
 							world.spawnEntityInWorld(entityitem);
 						}
 					}
@@ -206,7 +191,7 @@ public class BlockSiftExtractor extends Block{
 
 	@SideOnly(Side.CLIENT)
 	public void randomDisplayTick(World world, int x, int y, int z, Random random) {
-		if (this.isSifting2) {
+		if (this.isWorking_2) {
 			int direction = world.getBlockMetadata(x, y, z);
 
 			float xx = (float) x + 0.5F, yy = (float) y + random.nextFloat() * 6.0F / 16.0F, zz = (float) z + 0.5F, xx2 = random.nextFloat() * 0.3F - 0.2F, zz2 = 0.5F;
@@ -226,5 +211,4 @@ public class BlockSiftExtractor extends Block{
 			}
 		}
 	}
-
 }

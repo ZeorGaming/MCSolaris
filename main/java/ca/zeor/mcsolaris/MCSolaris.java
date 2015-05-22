@@ -12,6 +12,7 @@ import ca.zeor.mcsolaris.help.Reference;
 import ca.zeor.mcsolaris.init.ModBlocks;
 import ca.zeor.mcsolaris.init.ModItems;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -23,13 +24,13 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class MCSolaris 
 {
-	@Instance(Reference.MODID)
-	public static MCSolaris instance; 
-	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy; 
 	
-	@Mod.EventHandler
+	@Instance(Reference.MODID)
+	public static MCSolaris instance; 
+	
+	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		ModItems.init();
@@ -40,15 +41,12 @@ public class MCSolaris
 		proxy.registerTileEntities();
 	}
 
-	@Mod.EventHandler
+	@EventHandler
 	public void Init(FMLInitializationEvent event)
 	{
 		proxy.registerNetworkStuff();
 	}
 	
-	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent event)
-	{
-		
-	}
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event){}
 }

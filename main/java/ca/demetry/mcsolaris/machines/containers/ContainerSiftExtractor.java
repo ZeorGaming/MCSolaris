@@ -1,7 +1,11 @@
 package ca.demetry.mcsolaris.machines.containers;
 
-import ca.demetry.mcsolaris.machines.recipes.SiftExtractorRecipe;
-import ca.demetry.mcsolaris.machines.tileentities.TileEntitySiftExtractor;
+/**
+ * 
+ * @author Demetry
+ *
+ */
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -9,127 +13,126 @@ import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import ca.demetry.mcsolaris.machines.recipes.SiftExtractorRecipe;
+import ca.demetry.mcsolaris.machines.tileentities.TileEntitySiftExtractor;
 
-public class ContainerSiftExtractor extends Container {
-	
-	private TileEntitySiftExtractor tileFurnace;
-	private int lastCookTime;
-	private int lastBurnTime;
+public class ContainerSiftExtractor extends Container
+{
+	private TileEntitySiftExtractor sifter; 
+	private int lastSiftTime;
+	private int lastBurnTime; 
 	private int lastItemBurnTime;
 	
-	public ContainerSiftExtractor(InventoryPlayer player, TileEntitySiftExtractor tileEntityFurnace){
-		this.tileFurnace = tileEntityFurnace;
-		this.addSlotToContainer(new Slot(tileEntityFurnace, 0, 56, 17));
-		this.addSlotToContainer(new Slot(tileEntityFurnace, 1, 56, 53));
-		this.addSlotToContainer(new SlotFurnace(player.player, tileEntityFurnace, 2, 116, 35));
-		int i;
+	public ContainerSiftExtractor(InventoryPlayer player, TileEntitySiftExtractor siftExtractor){
+		this.sifter = siftExtractor;
 		
-		for(i = 0; i < 3; ++i){
-			for(int j = 0; j < 9; ++j){
+		//add the machines slots
+		this.addSlotToContainer(new Slot(sifter, 0, 56, 17));
+		this.addSlotToContainer(new Slot(sifter, 0, 56, 53));
+		this.addSlotToContainer(new SlotFurnace(player.player, sifter, 2, 116, 35));
+		
+		//get the players inventory and display it
+		//TODO: CREATE A CLASS THAT DOES THIS!
+		for(int i = 0; i < 3; ++i){
+			for(int j = 0; j < 9; ++i){
 				this.addSlotToContainer(new Slot(player, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
 			}
 		}
 		
-		for(i = 0; i < 9; ++i){
-			this.addSlotToContainer(new Slot(player, i , 8 + i * 18 , 142));
+		for(int i = 0; i < 9; ++i){
+			this.addSlotToContainer(new Slot(player, i, 8 + i * 18, 142));
 		}
 	}
-
+	
 	public void addCraftingToCrafters(ICrafting craft){
-		//super.addCraftingToCrafters(craft);
-		craft.sendProgressBarUpdate(this, 0, this.tileFurnace.furnaceCookTime);
-		craft.sendProgressBarUpdate(this, 1, this.tileFurnace.furnaceBurnTime);
-		craft.sendProgressBarUpdate(this, 2, this.tileFurnace.currentBurnTime);
+		super.addCraftingToCrafters(craft);
+		craft.sendProgressBarUpdate(this, 0, this.sifter.currentBurnTime);
+		craft.sendProgressBarUpdate(this, 1, this.sifter.furnaceBurnTime);
+		craft.sendProgressBarUpdate(this, 2, this.sifter.furnaceCookTime);
 	}
 	
 	public void detectAndSendChanges(){
-		super.detectAndSendChanges();
 		for(int i = 0; i < this.crafters.size(); ++i){
 			ICrafting craft = (ICrafting) this.crafters.get(i);
-			
-			if(this.lastCookTime != this.tileFurnace.furnaceCookTime){
-				craft.sendProgressBarUpdate(this, 0, this.tileFurnace.furnaceCookTime);
+		
+			if(this.lastSiftTime != this.sifter.furnaceBurnTime){
+				craft.sendProgressBarUpdate(this, 0, this.sifter.furnaceBurnTime);
 			}
 			
-			if(this.lastBurnTime != this.tileFurnace.furnaceBurnTime){
-				craft.sendProgressBarUpdate(this, 1, this.tileFurnace.furnaceBurnTime);
+			if(this.lastBurnTime != this.sifter.currentBurnTime){
+				craft.sendProgressBarUpdate(this, 0, this.sifter.currentBurnTime);
 			}
 			
-			if(this.lastItemBurnTime != this.tileFurnace.currentBurnTime){
-				craft.sendProgressBarUpdate(this, 2, this.tileFurnace.currentBurnTime);
+			if(this.lastItemBurnTime != this.sifter.furnaceCookTime){
+				craft.sendProgressBarUpdate(this, 0, this.sifter.furnaceCookTime);
 			}
 		}
-		
-		this.lastBurnTime = this.tileFurnace.furnaceBurnTime;
-		this.lastCookTime = this.tileFurnace.furnaceCookTime;
-		this.lastItemBurnTime = this.tileFurnace.currentBurnTime;
+		this.lastSiftTime = this.sifter.furnaceCookTime; 
+		this.lastBurnTime = this.sifter.furnaceBurnTime; 
+		this.lastItemBurnTime = this.sifter.currentBurnTime;
 	}
 	
-	@SideOnly(Side.CLIENT)
-	public void updateProgressBar(int par1, int par2){
-		if(par1 == 0){
-			this.tileFurnace.furnaceCookTime = par2;
-		}
-		
-		if(par1 == 1){
-			this.tileFurnace.furnaceBurnTime = par2;
-		}
-		
-		if(par1 == 2){
-			this.tileFurnace.currentBurnTime = par2;
+	@Override
+	public void updateProgressBar(int i, int j){
+		switch(i){
+			case 0 : this.sifter.furnaceBurnTime = j;
+				break;
+			case 1 : this.sifter.currentBurnTime = j;
+				break;
+			case 2 : this.sifter.furnaceCookTime = j;
+				break;
 		}
 	}
 	
 	@Override
 	public boolean canInteractWith(EntityPlayer player) {
-		return this.tileFurnace.isUseableByPlayer(player);
+		return this.sifter.isUseableByPlayer(player);
 	}
 	
-	public ItemStack transferStackInSlot(EntityPlayer player, int par2){
-		ItemStack itemstack = null;
-		Slot slot = (Slot) this.inventorySlots.get(par2);
+	public ItemStack transferStackInSlot(EntityPlayer player, int i){
+		ItemStack itemStack = null;
+		
+		Slot slot = (Slot) this.inventorySlots.get(i);
 		
 		if(slot != null && slot.getHasStack()){
-			ItemStack itemstack1 = slot.getStack();
-			itemstack = itemstack1.copy();
+			ItemStack _itemStack = slot.getStack();
+			itemStack = _itemStack.copy();
 			
-			if(par2 == 2){
-				if(!this.mergeItemStack(itemstack1, 3, 39, true)){
+			if(i == 2){
+				if(!this.mergeItemStack(_itemStack, 3, 39, true)){
 					return null;
 				}
-				slot.onSlotChange(itemstack1, itemstack);
-			}else if(par2 != 1 && par2 != 0){
-				if(SiftExtractorRecipe.smelting().getSmeltingResult(itemstack1) != null){
-					if(!this.mergeItemStack(itemstack1, 0, 1, false)){
+				slot.onSlotChange(_itemStack, itemStack);
+			}else if(i != 1 && i != 0){
+				if(SiftExtractorRecipe.smelting().getSmeltingResult(_itemStack) != null){
+					if(!this.mergeItemStack(_itemStack, 0, 1, false)){
 						return null;
 					}
-				}else if(TileEntitySiftExtractor.isItemFuel(itemstack1)){
-					if(!this.mergeItemStack(itemstack1, 1, 2, false)){
+				}else if(TileEntitySiftExtractor.isItemFuel(_itemStack)){
+					if(!this.mergeItemStack(_itemStack, 0, 2, false)){
 						return null;
 					}
-				}else if(par2 >=3 && par2 < 30){
-					if(!this.mergeItemStack(itemstack1, 30, 39, false)){
+				}else if(i >= 3 && i < 30){
+					if(!this.mergeItemStack(_itemStack, 30, 39, false)){
 						return null;
 					}
-				}else if(par2 >= 30 && par2 < 39 && !this.mergeItemStack(itemstack1, 3, 30, false)){
+				}else if(i >= 30 && i < 39 && !this.mergeItemStack(_itemStack, 3, 30, false)){
 					return null;
 				}
-			}else if(!this.mergeItemStack(itemstack1, 3, 39, false)){
+			}else if(!this.mergeItemStack(_itemStack, 3, 39, false)){
 				return null;
 			}
-			if(itemstack1.stackSize == 0){
+			if(_itemStack.stackSize == 0){
 				slot.putStack((ItemStack)null);
 			}else{
 				slot.onSlotChanged();
 			}
-			if(itemstack1.stackSize == itemstack.stackSize){
+			if(_itemStack.stackSize == itemStack.stackSize){
 				return null;
 			}
-			slot.onPickupFromSlot(player, itemstack1);
+			
+			slot.onPickupFromSlot(player, _itemStack);
 		}
-		return itemstack;
+		return itemStack;
 	}
-
 }

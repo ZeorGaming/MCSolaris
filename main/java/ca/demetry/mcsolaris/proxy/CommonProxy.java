@@ -8,14 +8,15 @@ import ca.zeor.mcsolaris.MCSolaris;
 
 /**
  * @author Demetry
- * TODO: Create this class
  */
-
+@SuppressWarnings("all")
 public class CommonProxy {
+	
 	public void registerNetworkStuff(){
 		NetworkRegistry.INSTANCE.registerGuiHandler(MCSolaris.instance, new GuiHandler());
 	}
+	
 	public void registerTileEntities(){
-		GameRegistry.registerTileEntity(TileEntitySiftExtractor.class, TileEntitySiftExtractor.publicName);
+		GameRegistry.registerTileEntity(TileEntitySiftExtractor.class, TileEntitySiftExtractor.getMachineName());
 	}
 }

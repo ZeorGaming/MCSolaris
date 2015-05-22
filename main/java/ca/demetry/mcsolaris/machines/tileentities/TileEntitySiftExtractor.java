@@ -1,5 +1,6 @@
 package ca.demetry.mcsolaris.machines.tileentities;
 
+import ca.demetry.mcsolaris.machines.recipes.SiftExtractorRecipe;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -8,20 +9,15 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import ca.demetry.mcsolaris.machines.blocks.*;
-import ca.demetry.mcsolaris.machines.recipes.SiftExtractorRecipe;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class TileEntitySiftExtractor extends TileEntity implements ISidedInventory {
 
-	public static final String publicName = "Sift Extractor";
-	
 	private static final int[] slotsTop = new int[] { 0 };
 	private static final int[] slotsBottom = new int[] { 2, 1 };
 	private static final int[] slotsSides = new int[] { 1 };
@@ -31,6 +27,12 @@ public class TileEntitySiftExtractor extends TileEntity implements ISidedInvento
 	public int furnaceBurnTime;
 	public int currentBurnTime;
 	public int furnaceCookTime;
+
+	private static String furnaceName;
+
+	public void furnaceName(String string){
+		TileEntitySiftExtractor.furnaceName = string;
+	}
 	
 	@Override
 	public int getSizeInventory() {
@@ -86,12 +88,12 @@ public class TileEntitySiftExtractor extends TileEntity implements ISidedInvento
 
 	@Override
 	public String getInventoryName() {
-		return this.hasCustomInventoryName() ? TileEntitySiftExtractor.publicName : "Sift Extractor";
+		return this.hasCustomInventoryName() ? TileEntitySiftExtractor.furnaceName : "Tut Furnace";
 	}
 
 	@Override
 	public boolean hasCustomInventoryName() {
-		return TileEntitySiftExtractor.publicName != null && TileEntitySiftExtractor.publicName.length() > 0;
+		return TileEntitySiftExtractor.furnaceName != null && TileEntitySiftExtractor.furnaceName.length() > 0;
 	}
 
 	@Override
@@ -116,6 +118,10 @@ public class TileEntitySiftExtractor extends TileEntity implements ISidedInvento
 		this.furnaceBurnTime = tagCompound.getShort("BurnTime");
 		this.furnaceCookTime = tagCompound.getShort("CookTime");
 		this.currentBurnTime = getItemBurnTime(this.furnaceItemStacks[1]);
+
+		if (tagCompound.hasKey("CustomName", 8)) {
+			TileEntitySiftExtractor.furnaceName = tagCompound.getString("CustomName");
+		}
 	}
 
 	public void writeToNBT(NBTTagCompound tagCompound) {
@@ -134,6 +140,9 @@ public class TileEntitySiftExtractor extends TileEntity implements ISidedInvento
 		}
 
 		tagCompound.setTag("Items", tagList);
+
+		if (this.hasCustomInventoryName()) {
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -155,7 +164,6 @@ public class TileEntitySiftExtractor extends TileEntity implements ISidedInvento
 	}
 
 	public void updateEntity() {
-		boolean flag = this.furnaceBurnTime > 0;
 		boolean flag1 = false;
 
 		if (this.furnaceBurnTime > 0) {
@@ -188,11 +196,6 @@ public class TileEntitySiftExtractor extends TileEntity implements ISidedInvento
 			} else {
 				this.furnaceCookTime = 0;
 			}
-		}
-
-		if (flag != this.furnaceBurnTime > 0) {
-			flag1 = true;
-			BlockSiftExtractor.updateBlockState(this.furnaceBurnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
 		}
 
 		if (flag1) {
@@ -243,8 +246,8 @@ public class TileEntitySiftExtractor extends TileEntity implements ISidedInvento
 				if(block == Blocks.sand){
 					return 200;
 				}
+
 			}
-			if(item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("EMERALD")) return 300;
 			return GameRegistry.getFuelValue(itemstack);
 		}
 	}
@@ -288,4 +291,7 @@ public class TileEntitySiftExtractor extends TileEntity implements ISidedInvento
 		return par3 != 0 || par1 != 1 || itemstack.getItem() == Items.bucket;
 	}
 
+	public static String getMachineName() {
+		return furnaceName;
+	}
 }
